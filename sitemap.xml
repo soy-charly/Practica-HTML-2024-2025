@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9/siteindex.xsd">
   <url>
     <loc>https://practica-html-2024-2025.vercel.app/</loc>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
-  <!-- Add more URLs here -->
+  <!-- Agrega más URLs aquí -->
 </urlset>
