@@ -5,10 +5,10 @@
     font-style: normal;
 }
 
-body {
-    background-color: rgb(50, 50, 50);
+body{
+    font-family: "SUSE Variable", sans-serif;
     margin: 2%;
-    font-family: 'SUSE Variable', sans-serif;
+    background-color: rgb(50, 50, 50);
 }
 
 #encabezado {
