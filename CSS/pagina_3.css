@@ -1,0 +1,81 @@
+@font-face {
+    font-family: 'SUSE Variable';
+    src: url('fonts/SUSE-VariableFont_wght.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body{
+    font-family: "SUSE Variable", sans-serif;
+    margin: 2%;
+    background-color: rgb(50, 50, 50);
+}
+
+#encabezado{
+    background-color: white;
+    text-align: center;
+    border: 3px solid black;
+    height: 150px;
+    line-height: 25px;
+    color: tomato;
+}
+
+#out{
+    text-align: justify;
+    color: white;
+    font-size: 20px;
+    margin: 10px;
+}
+
+a{
+    color: whitesmoke;
+    text-decoration: none;
+    margin-left: 50px;
+}
+
+#paginas{
+    text-align: right;
+    margin: 1%;
+    color: rgb(0, 50, 255);
+}
+
+img{
+    margin-top: 10px;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+h3{
+    background-color: darkgoldenrod;
+    text-align: center;
+    border: 2px solid black;
+    height: 50px;
+    line-height: 50px;
+    color: black;
+    margin-left: 300px;
+    margin-right: 300px;
+}
+
+h4{
+    background-color: cadetblue;
+    text-align: center;
+    border: 2px solid black;
+    height: 50px;
+    line-height: 50px;
+    color: black;
+    margin-left: 600px;
+    margin-right: 600px;
+}
+#homeLink,#p2Link,#p3Link{
+    color: black;
+}
+#git, #git_push,#git_merge{
+    height: 300px;
+    width: 300px;
+    margin-left: 1px;  
+}
+#github, #pull-request, #issues, #actions, #workflow{
+    height: 300px;
+    width: 400px;
+    margin-left: 1px;  
+}

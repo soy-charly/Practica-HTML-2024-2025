@@ -1,0 +1,66 @@
+body {
+    background-color: rgb(50, 50, 50);
+    margin: 2%;
+}
+#encabezado {
+    background-color: white;
+    text-align: center;
+    border: 3px solid black;
+    height: 150px;
+    line-height: 25px;
+    color: tomato;
+}
+#out {
+    text-align: justify;
+    color: white;
+    font-size: 20px;
+    margin: 10px;
+}
+h3 {
+    background-color: darkgoldenrod;
+    text-align: center;
+    border: 2px solid black;
+    height: 50px;
+    line-height: 50px;
+    color: black;
+    margin-left: 300px;
+    margin-right: 300px;
+}
+h4 {
+    color: teal;
+    text-align: center;
+}
+#git_workflow {
+    height: 300px;
+    width: 600px;
+    margin-left: 1px;  
+}
+#codigo_ej {
+    height: 450px;
+    width: 600px;
+    margin-left: 1px; 
+}
+#lista_git {
+    background-color: aqua;
+    border: 2px solid black;
+    color: black;
+    font-size: 20px;
+}
+a {
+    color: black;
+    text-decoration: none;
+    margin-left: 50px;
+}
+#paginas {
+    text-align: right;
+    color: rgb(0, 50, 255);
+    margin: 1%;
+}
+#columna_2 {
+    padding-left: 400px;
+}
+#explica {
+    color: white;
+    padding-left: 50px;
+    font-size: 20px;
+}
