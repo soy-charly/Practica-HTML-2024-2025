@@ -33,7 +33,7 @@
             cycles: 10000,
             autolock: true,
             onready: (fs, main) => {
-                fs.extract("DOOM.zip").then(() => {
+                fs.extract("/DOOM.zip").then(() => {
                     main(["DOOM.EXE"]);
                 });
             }
