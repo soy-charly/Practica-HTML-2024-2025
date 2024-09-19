@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js-dos DOOM</title>
+
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        #dos {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+    <!-- js-dos style sheet -->
+    <link rel="stylesheet" href="JS-DOS/js-dos.css">
+
+    <!-- js-dos -->
+    <script src="JS-DOS/js-dos.js"></script>
+</head>
+<body>
+
+    <div id="dos" style="width: 100%; height: 100%"></div>
+
+    <script>
+        // Cargar el archivo .zip localmente desde GAMES
+        Dos(document.getElementById("dos"), {
+            wdosboxUrl: "JS/dosbox.js.mem",
+            cycles: 10000,
+            autolock: true,
+            onready: (fs, main) => {
+                fs.extract("DOOM.zip").then(() => {
+                    main(["GAME/FDOOM.EXE"]);
+                });
+            }
+        });
+    </script>
+</body>
+</html>
