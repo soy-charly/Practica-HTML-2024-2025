@@ -5,6 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Guía de Trabajo en Equipo con Git y GitHub</title>
     <link rel="stylesheet" href="styles/pagina_3.css">
+    <style>
+        /* Estilos para el campo de contraseña */
+        .password-container {
+            margin-top: 20px;
+            display: none;
+            text-align: center;
+        }
+        input[type="password"] {
+            padding: 10px;
+            font-size: 16px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #4285f4;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #357ae8;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -145,5 +168,35 @@
             </td>     
         </tr>
     </table>
+
+    <!-- Contenedor para el campo de la contraseña -->
+    <div class="password-container" id="password-container">
+        <p>Introduce la contraseña para acceder:</p>
+        <input type="password" id="password" placeholder="Contraseña">
+        <button onclick="checkPassword()">Acceder</button>
+    </div>
+
+    <script>
+        // Mostrar el campo de contraseña al pulsar TAB
+        document.addEventListener('keydown', function(event) {
+            if (event.key === "Tab") {
+                event.preventDefault(); // Evita que el TAB avance al siguiente elemento
+                document.getElementById('password-container').style.display = 'block';
+                document.getElementById('password').focus();
+            }
+        });
+
+        // Verificar la contraseña
+        function checkPassword() {
+            const password = document.getElementById('password').value;
+            const correctPassword = "perry the platapus"; // Cambia esto por la contraseña que desees
+
+            if (password === correctPassword) {
+                window.location.href = "ERROR_404.html"; // Redirigir a ERROR_404.html
+            } else {
+                alert("Contraseña incorrecta");
+            }
+        }
+    </script>
 </body>
 </html>
