@@ -15,9 +15,5 @@
       "src": "/(.*)",
       "dest": "/$1"
     }
-  ],
-    "rewrites": [
-      { "source": "/JS-DOS/(.*)", "destination": "/JS-DOS/$1" },
-      { "source": "/GAMES/(.*)", "destination": "/GAMES/$1" }
-    ]  
+  ]
 }
