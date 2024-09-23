@@ -5,7 +5,7 @@ vercel/
 python/
 
 # Ignorar archivos específicos
-MSBOX.html
+msbox.html
 robots.txt
 sitemap.xml
 
