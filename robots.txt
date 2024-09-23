@@ -1,3 +1,0 @@
-User-agent: *
-Disallow: /pagina_privada.html
-Sitemap: https://practica-html-2024-2025.vercel.app/sitemap.xml
