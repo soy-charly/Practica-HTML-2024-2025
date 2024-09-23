@@ -21,31 +21,18 @@
     <!-- js-dos style sheet -->
     <link rel="stylesheet" href="JS-DOS/js-dos.css">
 
-    <!-- js-dos -->
-    <script src="JS-DOS/js-dos.js">
-            Dos(document.getElementById("dos"), {
-        wdosboxUrl: "JS-DOS/emulators.js", // Ajusta esta ruta según donde esté el archivo
-        pathPrefix: "JS-DOS/" // Define la carpeta donde están los recursos de js-dos
-    }).ready((fs, main) => {
-        fetch('GAMES/DOOM.zip') // Carga el archivo desde la raíz del servidor
-            .then(response => response.arrayBuffer())
-            .then(buffer => {
-                fs.createFile('DOOM.zip', new Uint8Array(buffer));
-                return fs.extract('DOOM.zip');
-            })
-            .then(() => {
-                main(["DOOM.EXE"]); // Ejecuta el archivo DOOM.EXE dentro del zip
-            });
-    });
-
-    </script>
+    <!-- js-dos library -->
+    <script src="JS-DOS/js-dos.js"></script>
 </head>
 <body>
 
     <div id="dos"></div>
 
     <script>
-        Dos(document.getElementById("dos")).ready((fs, main) => {
+        Dos(document.getElementById("dos"), {
+            wdosboxUrl: "JS-DOS/emulators.js", // Ajusta esta ruta según donde esté el archivo
+            pathPrefix: "JS-DOS/" // Define la carpeta donde están los recursos de js-dos
+        }).ready((fs, main) => {
             fetch('GAMES/DOOM.zip') // Carga el archivo desde la raíz del servidor
                 .then(response => response.arrayBuffer())
                 .then(buffer => {
