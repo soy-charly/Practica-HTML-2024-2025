@@ -1,8 +1,14 @@
-.vercel
+# Ignorar el directorio .vercel
+vercel/
+
+# Ignorar la carpeta python
 python/
-.MSBOX.html
-.robots.txt
-.sitemap.xml
-.ERROR_404.html
+
+# Ignorar archivos específicos
+MSBOX.html
+robots.txt
+sitemap.xml
+
+# Ignorar directorios
 JS-DOS/
 GAMES/
