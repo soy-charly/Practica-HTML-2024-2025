@@ -22,71 +22,15 @@
         a {
             color: #4285f4;
             text-decoration: none;
-            font-size: 18px;
         }
         a:hover {
             text-decoration: underline;
         }
-        .error-container {
-            max-width: 600px;
-            margin: auto;
-        }
-        .password-container {
-            margin-top: 20px;
-            display: none;
-        }
-        input[type="password"] {
-            padding: 10px;
-            font-size: 16px;
-        }
-        button {
-            padding: 10px 20px;
-            font-size: 16px;
-            background-color: #4285f4;
-            color: #fff;
-            border: none;
-            cursor: pointer;
-        }
-        button:hover {
-            background-color: #357ae8;
-        }
     </style>
 </head>
 <body>
-    <div class="error-container">
-        <h1>404</h1>
-        <p>Lo sentimos, la página que buscas no existe.</p>
-        <p><a href="/">Volver a la página principal</a></p>
-
-        <!-- Contenedor para el campo de la contraseña -->
-        <div class="password-container" id="password-container">
-            <p>Introduce la contraseña para acceder:</p>
-            <input type="password" id="password" placeholder="Contraseña">
-            <button onclick="checkPassword()">Acceder</button>
-        </div>
-    </div>
-
-    <script>
-        // Mostrar el campo de contraseña al pulsar TAB
-        document.addEventListener('keydown', function(event) {
-            if (event.key === "Tab") {
-                event.preventDefault(); // Evita que el TAB avance al siguiente elemento
-                document.getElementById('password-container').style.display = 'block';
-                document.getElementById('password').focus();
-            }
-        });
-
-        // Verificar la contraseña
-        function checkPassword() {
-            const password = document.getElementById('password').value;
-            const correctPassword = "pironkito teton"; // Cambia esto por la contraseña que desees
-
-            if (password === correctPassword) {
-                window.location.href = "MSBOX/MSBOX.html"; // Redirigir a DOOM.html
-            } else {
-                alert("Contraseña incorrecta");
-            }
-        }
-    </script>
+    <h1>404</h1>
+    <p>Lo sentimos, la página que buscas no existe.</p>
+    <p><a href="/">Volver a la página principal</a></p>
 </body>
 </html>
