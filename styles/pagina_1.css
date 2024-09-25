@@ -1,67 +1,140 @@
-body{
-    font-family: "SUSE Variable", sans-serif;
-    margin: 2%;
-    background-color: rgb(50, 50, 50);
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
 }
-#encabezado {
-    background-color: white;
-    text-align: center;
-    border: 3px solid black;
-    height: 150px;
-    line-height: 25px;
-    color: tomato;
+
+h1, h3, h4, h5 {
+    color: #333;
 }
-#out {
-    text-align: justify;
+
+/* Estilos para el encabezado */
+header {
+    background-color: #4CAF50;
+    padding: 10px;
     color: white;
-    font-size: 20px;
-    margin: 10px;
-}
-h3 {
-    background-color: darkgoldenrod;
-    text-align: center;
-    border: 2px solid black;
-    height: 50px;
-    line-height: 50px;
-    color: black;
-    margin-left: 300px;
-    margin-right: 300px;
-}
-h4 {
-    color: teal;
     text-align: center;
 }
-#git_workflow {
-    height: 300px;
-    width: 600px;
-    margin-left: 1px;  
+
+header h1 {
+    margin: 0;
+    font-size: 24px;
 }
-#codigo_ej {
-    height: 450px;
-    width: 600px;
-    margin-left: 1px; 
-}
-#lista_git {
-    background-color: aqua;
-    border: 2px solid black;
-    color: black;
-    font-size: 20px;
-}
-a {
-    color: black;
+
+#paginas nav a {
+    color: white;
     text-decoration: none;
-    margin-left: 50px;
+    margin: 0 15px;
+    font-weight: bold;
 }
-#paginas {
-    text-align: right;
-    color: rgb(0, 50, 255);
-    margin: 1%;
+
+#paginas nav a:hover {
+    text-decoration: underline;
 }
-#columna_2 {
-    padding-left: 400px;
+
+/* Contenido principal */
+h4 {
+    text-align: center;
+    font-size: 18px;
+    color: #555;
 }
-#explica {
+
+h3 {
+    font-size: 22px;
+    margin-left: 20px;
+}
+
+#lista_git, #explica {
+    margin: 20px auto;
+    width: 80%;
+}
+
+#lista_git ul {
+    list-style: none;
+    padding: 0;
+}
+
+#lista_git li {
+    margin-bottom: 15px;
+}
+
+#lista_git li h5 {
+    font-size: 18px;
+    color: #4CAF50;
+    margin: 0;
+}
+
+#lista_git li p {
+    font-size: 16px;
+    color: #555;
+}
+
+/* Estilos para las tablas */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+table td {
+    padding: 15px;
+    vertical-align: top;
+}
+
+#explica td img, #git_workflow {
+    width: 100%;
+    max-width: 400px;
+    border: 2px solid #ddd;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+/* Estilos específicos */
+#out {
+    font-size: 16px;
+    color: #333;
+}
+
+ul#out {
+    list-style: none;
+    padding: 0;
+}
+
+ul#out li {
+    margin-bottom: 20px;
+}
+
+/* Enlaces de navegación */
+nav a {
+    padding: 10px 20px;
+    background-color: #333;
     color: white;
-    padding-left: 50px;
-    font-size: 20px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+nav a:hover {
+    background-color: #555;
+}
+
+/* Enlaces del pie de página */
+footer a {
+    color: #4CAF50;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Estilos para imágenes */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+#git_workflow {
+    margin: 20px 0;
 }

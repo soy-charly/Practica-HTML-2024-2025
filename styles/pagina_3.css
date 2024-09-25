@@ -1,81 +1,133 @@
-@font-face {
-    font-family: 'SUSE Variable';
-    src: url('fonts/SUSE-VariableFont_wght.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
 }
 
-body{
-    font-family: "SUSE Variable", sans-serif;
-    margin: 2%;
-    background-color: rgb(50, 50, 50);
+h1, h3 {
+    color: #333;
 }
 
-#encabezado{
-    background-color: white;
-    text-align: center;
-    border: 3px solid black;
-    height: 150px;
-    line-height: 25px;
-    color: tomato;
-}
-
-#out{
-    text-align: justify;
+header {
+    background-color: #2c3e50;
     color: white;
-    font-size: 20px;
-    margin: 10px;
+    padding: 15px;
+    text-align: center;
 }
 
-a{
-    color: whitesmoke;
+header h1 {
+    margin: 0;
+    font-size: 26px;
+}
+
+#paginas nav a {
+    color: white;
     text-decoration: none;
-    margin-left: 50px;
+    margin: 0 10px;
+    font-weight: bold;
 }
 
-#paginas{
-    text-align: right;
-    margin: 1%;
-    color: rgb(0, 50, 255);
+#paginas nav a:hover {
+    text-decoration: underline;
 }
 
-img{
-    margin-top: 10px;
-    margin-left: 100px;
-    margin-right: 100px;
+/* Estilos para las tablas */
+table {
+    width: 85%;
+    margin: 20px auto;
+    border-spacing: 20px;
 }
 
-h3{
-    background-color: darkgoldenrod;
+table td {
+    vertical-align: top;
+    padding: 20px;
+}
+
+table td img {
+    width: 100%;
+    max-width: 350px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+p#out {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+}
+
+h3 {
     text-align: center;
-    border: 2px solid black;
-    height: 50px;
-    line-height: 50px;
-    color: black;
-    margin-left: 300px;
-    margin-right: 300px;
+    font-size: 22px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    color: #4CAF50;
 }
 
-h4{
-    background-color: cadetblue;
+h3, h4 {
     text-align: center;
-    border: 2px solid black;
-    height: 50px;
-    line-height: 50px;
-    color: black;
-    margin-left: 600px;
-    margin-right: 600px;
 }
-#homeLink,#p2Link,#p3Link{
-    color: black;
+
+/* Botón */
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #4285f4;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
 }
-#git, #git_push,#git_merge{
-    height: 300px;
+
+button:hover {
+    background-color: #357ae8;
+}
+
+/* Estilos para el contenedor de contraseña */
+.password-container {
+    margin-top: 20px;
+    display: none;
+    text-align: center;
+}
+
+input[type="password"] {
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
     width: 300px;
-    margin-left: 1px;  
 }
-#github, #pull-request, #issues, #actions, #workflow{
-    height: 300px;
-    width: 400px;
-    margin-left: 1px;  
+
+input[type="password"]:focus {
+    border-color: #4285f4;
+    outline: none;
+}
+
+/* Estilos específicos */
+code {
+    background-color: #f0f0f0;
+    padding: 2px 6px;
+    border-radius: 4px;
+    color: #c7254e;
+}
+
+/* Estilos de imagenes */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Enlaces de navegación */
+nav a {
+    padding: 10px 20px;
+    background-color: #34495e;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+nav a:hover {
+    background-color: #2c3e50;
 }

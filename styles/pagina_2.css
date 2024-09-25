@@ -1,88 +1,101 @@
-@font-face {
-    font-family: 'SUSE Variable';
-    src: url('fonts/SUSE-VariableFont_wght.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
 }
 
-body{
-    font-family: "SUSE Variable", sans-serif;
-    margin: 2%;
-    background-color: rgb(50, 50, 50);
+h1, h3, h4, h5 {
+    color: #333;
 }
 
-#encabezado {
-    background-color: white;
-    text-align: center;
-    border: 3px solid black;
-    height: 150px;
-    line-height: 25px;
-    color: tomato;
-    font-size: 30px;
-}
-
-#out {
-    text-align: justify;
+/* Estilos para el encabezado */
+header {
+    background-color: #4CAF50;
     color: white;
-    font-size: 20px;
-    margin: 10px;
-    font-family: 'SUSE Variable', sans-serif;
-}
-
-a {
-    color: black;
-    text-decoration: none;
-    margin-left: 50px;
-}
-
-#paginas {
-    text-align: right;
-    color: rgb(0, 50, 255);
-    margin: 1%;
-}
-
-img {
-    margin-top: 10px;
-    margin-left: 100px;
-    margin-right: 100px;
-    max-width: 100%;
-    height: auto;
-}
-
-h3 {
-    background-color: darkgoldenrod;
+    padding: 10px;
     text-align: center;
-    border: 2px solid black;
-    height: 50px;
-    line-height: 50px;
-    color: black;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 50%;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+#paginas nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+}
+
+#paginas nav a:hover {
+    text-decoration: underline;
+}
+
+/* Contenido principal */
+h3 {
+    text-align: center;
+    font-size: 22px;
+    color: #555;
+    margin: 20px 0;
 }
 
 h4 {
-    background-color: cadetblue;
-    text-align: center;
-    border: 2px solid black;
-    height: 50px;
-    line-height: 50px;
-    color: black;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 30%;
-}
-#git_commit, #git_pull, #git_branch, #git_push,#git_merge{
-    height: 300px;
-    width: 600px;
-    margin-left: 1px;  
+    font-size: 18px;
+    margin-left: 20px;
+    color: #4CAF50;
 }
 
-/* Ajuste de la fuente en diferentes tamaños de pantalla */
-@media (max-width: 768px) {
-    h3, h4 {
-        margin-left: 10px;
-        margin-right: 10px;
-        font-size: 18px;
-    }
+/* Estilos para las tablas */
+table {
+    width: 80%;
+    margin: 20px auto;
+    border-spacing: 15px;
+}
+
+table td {
+    vertical-align: top;
+    padding: 15px;
+}
+
+table td img {
+    width: 100%;
+    max-width: 400px;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+}
+
+p#out {
+    font-size: 16px;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Estilos específicos */
+code {
+    background-color: #f0f0f0;
+    padding: 2px 6px;
+    border-radius: 4px;
+    color: #c7254e;
+}
+
+/* Estilos para enlaces de navegación */
+nav a {
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+nav a:hover {
+    background-color: #555;
+}
+
+/* Estilos para imágenes */
+img {
+    max-width: 100%;
+    height: auto;
 }
