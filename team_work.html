@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guía de Trabajo en Equipo con Git y GitHub</title>
+    <link rel="stylesheet" href="styles/pagina_3.css">
+    <style>
+        /* Estilos para el campo de contraseña */
+        .password-container {
+            margin-top: 20px;
+            display: none;
+            text-align: center;
+        }
+        input[type="password"] {
+            padding: 10px;
+            font-size: 16px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #4285f4;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #357ae8;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 id="encabezado">
+            <div>
+                <h5 id="paginas">
+                    <nav>
+                        <a id="homeLink" href="home.html">Inicio</a>
+                        <a id="p2Link" href="basic_commands.html">Comandos básicos</a>  
+                        <a id="p3Link" href="team_work.html">Trabajo en Equipo</a>
+                    </nav>
+                </h5>
+            </div>
+            Trabajo en Equipo con Git y GitHub
+        </h1>
+    </header>
+
+    <table>
+        <h3>Git: Control de Versiones</h3>
+        <tr>
+            <td>
+                <img id="git" src="IMG/git_logo.png" alt="Git Logo">
+            </td>       
+            <td>
+                <p id="out">
+                    Git es un sistema de control de versiones distribuido que permite a los desarrolladores 
+                    rastrear cambios en el código fuente durante el desarrollo de software. Usar Git en equipo 
+                    facilita la colaboración, ya que permite a cada miembro trabajar de manera independiente 
+                    en diferentes características o correcciones, mientras que Git asegura que los cambios 
+                    sean registrados y puedan combinarse o revertirse sin conflicto.
+                </p>
+            </td>     
+        </tr>
+    </table>
+
+    <table>
+        <h3>GitHub: Plataforma de Colaboración</h3>
+        <tr>
+            <td>
+                <img id="github" src="IMG/GitHub_Logo.png" alt="GitHub Logo">
+            </td>       
+            <td>
+                <p id="out">
+                    GitHub es una plataforma de desarrollo colaborativo basada en Git. Facilita el trabajo en 
+                    equipo permitiendo a los desarrolladores compartir, gestionar y colaborar en proyectos de 
+                    código abierto y privado. GitHub proporciona herramientas como repositorios, pull requests, 
+                    issues y proyectos, que ayudan a gestionar el ciclo de vida del desarrollo de software 
+                    de manera eficiente y transparente.
+                </p>
+            </td>     
+        </tr>
+    </table>
+
+    <table>
+        <h3>Fork y Pull Requests</h3>
+        <tr>
+            <td>
+                <img id="pull-request" src="IMG/Pull_Request.png" alt="Pull Request">
+            </td>       
+            <td>
+                <p id="out">
+                    El flujo de trabajo con "Forks" y "Pull Requests" es crucial para contribuir a proyectos 
+                    en GitHub. Los desarrolladores pueden hacer una copia del repositorio mediante un "fork", 
+                    trabajar en las mejoras o correcciones en su propia rama, y luego proponer los cambios a 
+                    través de un "pull request". Esto facilita la revisión del código antes de fusionar los 
+                    cambios al proyecto principal, asegurando calidad y control sobre el código.
+                </p>
+            </td>     
+        </tr>
+    </table>
+
+    <table>
+        <h3>Branching y Merge</h3>
+        <tr>
+            <td>
+                <img id="branching" src="IMG/branching.png" alt="Branching y Merge">
+            </td>       
+            <td>
+                <p id="out">
+                    Una buena práctica en el trabajo colaborativo es el uso de ramas ("branches") para separar 
+                    las nuevas características o correcciones del código base. Esto permite que varios 
+                    desarrolladores trabajen en paralelo sin interferir en el trabajo de otros. Después de 
+                    realizar los cambios, las ramas pueden fusionarse ("merge") a la rama principal, 
+                    generalmente después de pasar una revisión y pruebas.
+                </p>
+            </td>     
+        </tr>
+    </table>
+
+    <table>
+        <h3>Issues y Proyectos</h3>
+        <tr>
+            <td>
+                <img id="issues" src="IMG/issues.png" alt="Issues y Proyectos">
+            </td>       
+            <td>
+                <p id="out">
+                    GitHub permite gestionar el progreso del proyecto mediante "Issues" y "Proyectos". 
+                    Los Issues son tareas o problemas que deben resolverse, y cada miembro del equipo puede 
+                    colaborar en su resolución. Además, los Proyectos ofrecen un tablero Kanban para organizar 
+                    y priorizar tareas, mejorando la productividad y la claridad en los objetivos del equipo.
+                </p>
+            </td>     
+        </tr>
+    </table>
+
+    <table>
+        <h3>Acciones y Automatización</h3>
+        <tr>
+            <td>
+                <img id="actions" src="IMG/actions.png" alt="GitHub Actions">
+            </td>       
+            <td>
+                <p id="out">
+                    GitHub Actions es una herramienta de automatización que permite ejecutar flujos de trabajo 
+                    personalizados como la integración continua y el despliegue continuo (CI/CD). Esto significa 
+                    que cada vez que se hagan cambios en el código, como una nueva versión, las pruebas pueden 
+                    ejecutarse automáticamente, y si todo funciona correctamente, la nueva versión se despliega 
+                    en el servidor de producción.
+                </p>
+            </td>     
+        </tr>
+    </table>
+
+    <table>
+        <h3>Flujos de Trabajo con Git</h3>
+        <tr>
+            <td>
+                <img id="workflow" src="IMG/git-workflow.png" alt="Git Workflow">
+            </td>       
+            <td>
+                <p id="out">
+                    Existen varios flujos de trabajo comunes al usar Git en equipo. Algunos ejemplos son Git 
+                    Flow, GitHub Flow, y Trunk-Based Development. Estos flujos definen cómo deben organizarse 
+                    las ramas y cómo los desarrolladores deben colaborar para mantener un proyecto estable 
+                    mientras se añaden nuevas características o se realizan correcciones.
+                </p>
+            </td>     
+        </tr>
+    </table>
+
+    <!-- Contenedor para el campo de la contraseña -->
+    <div class="password-container" id="password-container">
+        <p>Introduce la contraseña para acceder:</p>
+        <input type="password" id="password" placeholder="Contraseña">
+        <button onclick="checkPassword()">Acceder</button>
+    </div>
+
+    <script>
+        // Mostrar el campo de contraseña al pulsar TAB
+        document.addEventListener('keydown', function(event) {
+            if (event.key === "Tab") {
+                event.preventDefault(); // Evita que el TAB avance al siguiente elemento
+                document.getElementById('password-container').style.display = 'block';
+                document.getElementById('password').focus();
+            }
+        });
+
+        // Verificar la contraseña
+        function checkPassword() {
+            const password = document.getElementById('password').value;
+            const correctPassword = "perry the platapus"; // Cambia esto por la contraseña que desees
+
+            if (password === correctPassword) {
+                window.location.href = "ERROR_404.html"; // Redirigir a ERROR_404.html
+            } else {
+                alert("Contraseña incorrecta");
+            }
+        }
+    </script>
+</body>
+</html>
