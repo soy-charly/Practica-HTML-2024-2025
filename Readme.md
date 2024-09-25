@@ -2,11 +2,11 @@
 Este repositorio contiene un tutorial detallado sobre cómo utilizar Git para gestionar versiones de proyectos. Aprenderás a inicializar repositorios, hacer commits, crear ramas, y colaborar en proyectos.
 
 ## Tabla de Contenidos
-1. [Introducción a Git](#introducción-a-git)
+1. [Introducción a Git](practica-html-2024-2025.vercel.app)
 2. [Instalación de Git](#instalación-de-git)
-3. [Comandos Básicos de Git](#comandos-básicos-de-git)
+3. [Comandos Básicos de Git](https://practica-html-2024-2025.vercel.app/basic_commands.html)
 4. [Uso de Ramas](#uso-de-ramas)
-5. [Colaboración con GitHub](#colaboración-con-github)
+5. [Colaboración con GitHub](https://practica-html-2024-2025.vercel.app/team_work.html)
 
 
 ## Instalación de Git
