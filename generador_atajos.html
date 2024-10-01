@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generador de Atajos Emmet</title>
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+
+    <header>
+        <h1 id="encabezado">
+            <div>
+                <h5 id="paginas">
+                    <nav>
+                        <a id="homeLink" href="home.html">Inicio</a>
+                        <a id="p2Link" href="basic_commands.html">Comandos básicos</a>  
+                        <a id="p3Link" href="team_work.html">Trabajo en Equipo</a>
+                    </nav>
+                </h5>
+            </div>
+            Tutorial Git
+        </h1>
+    </header>
+
+<div class="container">
+    <h1>Generador de Atajos Emmet</h1>
+
+    <label for="cantidad">Ingresa la cantidad de divs:</label>
+    <input type="number" id="cantidad" min="1" placeholder="Cantidad de divs" required>
+
+    <label for="clase">Nombre de la clase (opcional):</label>
+    <input type="text" id="clase" placeholder="Nombre de la clase">
+
+    <label for="contenido">Selecciona el contenido del div:</label>
+    <select id="contenido">
+        <option value="h1{Título}">h1{Título}</option>
+        <option value="p{Texto}">p{Texto}</option>
+        <option value="h2{Subtítulo}">h2{Subtítulo}</option>
+        <option value="span{Etiqueta}">span{Etiqueta}</option>
+        <option value="ul>li*3{Elemento}">ul>li*3{Elemento}</option>
+    </select>
+
+    <label for="texto_adicional">Texto adicional dentro del div (opcional):</label>
+    <input type="text" id="texto_adicional" placeholder="Texto adicional">
+
+    <button onclick="generarAtajo()">Generar Atajo</button>
+
+    <div id="resultado" class="result"></div>
+
+    <button id="copiarBtn" class="hidden" onclick="copiarAtajo()">Copiar al Portapapeles</button>
+</div>
+
+<script src="JS/script.js"></script>
+<footer>
+    <p>&copy; 2024 - Práctica de HTML en Vercel. Todos los derechos reservados.</p>
+    <p>Contacto: <a href="mailto:email@example.com">email@example.com</a></p>
+    <p><a href="other/privacidad.html">Política de Privacidad</a> | <a href="other/terminos.html">Términos y Condiciones</a></p>
+</footer>
+</body>
+</html>
