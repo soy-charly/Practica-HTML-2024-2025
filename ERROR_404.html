@@ -30,11 +30,14 @@
     <script>
         document.addEventListener('keydown', function(event) {
             if (event.key === "Tab") {
-                event.preventDefault(); // Evita el comportamiento predeterminado de la tecla Tab
+                event.preventDefault(); 
                 let password = prompt("Introduce la contraseña:");
                 if (password === "vagueza extrema") {
-                    window.location.href = "generador_atajos.html"; // Redirige si la contraseña es correcta
-                } else {
+                    window.location.href = "generador_atajos.html"; 
+                }else if (password ==="salva pantallas") {
+                    window.location.href = "/dist/index.html"
+                }
+                else {
                     alert("Contraseña incorrecta");
                 }
             }
