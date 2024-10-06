@@ -16,6 +16,14 @@
       "dest": "/home.html"
     },
     {
+      "src": "/basic_commands",
+      "dest": "/basic_commands.html"
+    },
+    {
+      "src": "/team_work",
+      "dest": "/team_work.html"
+    },
+    {
       "src": "/screen_saver",
       "dest": "/screen_saver.html"
     },
