@@ -16,8 +16,13 @@
       "dest": "/home.html"
     },
     {
+      "src": "/screen_saver",
+      "dest": "/screen_saver.html"
+    },
+    {
       "src": "/(.*)",
-      "dest": "/$1"
+      "dest": "/ERROR_404.html",
+      "status": 404
     }
   ]
 }
