@@ -24,9 +24,17 @@
       "dest": "/ERROR_404.html",
       "status": 404
     },
-    { "source": "/home", "destination": "/home.html" },
-    { "source": "/basic_commands", "destination": "/basic_commands.html" },
-    { "source": "/team_work", "destination": "/team_work.html" }
-    
+    {
+      "src": "/home",
+      "dest": "/home.html"
+    },
+    {
+      "src": "/basic_commands",
+      "dest": "/basic_commands.html"
+    },
+    {
+      "src": "/team_work",
+      "dest": "/team_work.html"
+    }
   ]
 }
