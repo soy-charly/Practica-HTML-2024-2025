@@ -20,7 +20,7 @@
       "dest": "/screen_saver.html"
     },
     {
-      "src": "/(.*)",
+      "src": "/error_404",
       "dest": "/ERROR_404.html",
       "status": 404
     }
