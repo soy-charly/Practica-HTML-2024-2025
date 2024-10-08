@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generador de Atajos Emmet</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            max-width: 600px;
+            margin: auto;
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+        .result {
+            margin-top: 20px;
+            font-size: 16px;
+            color: blue;
+        }
+        button {
+            margin-top: 10px;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        #cantidadLiContainer {
+            display: none; /* Ocultar por defecto */
+        }
+    </style>
+</head>
+<body>
+    <h1>Generador de Atajos Emmet</h1>
+    <label for="cantidadDivs">Ingresa la cantidad de divs:</label>
+    <input type="number" id="cantidadDivs" min="1" required>
+
+    <label>
+        <input type="checkbox" id="checkboxClase"> ¿Los divs tendrán clase?
+    </label>
+    <label for="nombreClase">Nombre de la clase:</label>
+    <input type="text" id="nombreClase" disabled>
+
+    <label>
+        <input type="checkbox" id="checkboxContenido"> ¿Los divs tendrán contenido?
+    </label>
+    <label for="contenido">Selecciona el contenido del div:</label>
+    <select id="contenido" disabled>
+        <option value="h1{Título}">h1{Título}</option>
+        <option value="p{Texto}">p{Texto}</option>
+        <option value="h2{Subtítulo}">h2{Subtítulo}</option>
+        <option value="span{Etiqueta}">span{Etiqueta}</option>
+        <option value="ul">ul</option>
+        <option value="ol">ol</option>
+    </select>
+
+    <div id="cantidadLiContainer">
+        <label for="cantidadLi">Cantidad de elementos en la lista:</label>
+        <input type="number" id="cantidadLi" min="1" value="3">
+    </div>
+
+    <label for="textoAdicional">Texto adicional dentro del div:</label>
+    <input type="text" id="textoAdicional" disabled>
+
+    <button onclick="generarAtajo()">Generar Atajo</button>
+    <button onclick="copiarAlPortapapeles()">Copiar al Portapapeles</button>
+
+    <div class="result" id="resultado"></div>
+
+    <script>
+        let atajoGenerado = ""; // Variable para almacenar el atajo generado
+
+        function generarAtajo() {
+            const cantidad = parseInt(document.getElementById('cantidadDivs').value);
+            const claseVar = document.getElementById('checkboxClase').checked;
+            const contenidoVar = document.getElementById('checkboxContenido').checked;
+
+            if (isNaN(cantidad) || cantidad <= 0) {
+                alert("La cantidad debe ser un número positivo.");
+                return;
+            }
+
+            let atajo = `div*${cantidad}`;
+            if (claseVar) {
+                const nombreClase = document.getElementById('nombreClase').value.trim();
+                if (!nombreClase) {
+                    alert("Debes ingresar un nombre para la clase.");
+                    return;
+                }
+                atajo += `.${nombreClase}`;
+            }
+
+            if (contenidoVar) {
+                const contenidoSeleccionado = document.getElementById('contenido').value;
+                const textoAdicional = document.getElementById('textoAdicional').value.trim();
+
+                // Verificar si se seleccionó una lista
+                if (contenidoSeleccionado === "ul" || contenidoSeleccionado === "ol") {
+                    const cantidadLi = document.getElementById('cantidadLi').value;
+
+                    if (cantidadLi < 1) {
+                        alert("Debes ingresar un número válido de elementos en la lista.");
+                        return;
+                    }
+                    
+                    // Usar el texto adicional para reemplazar {Elemento}
+                    const textoLi = textoAdicional || "Elemento"; // Usar "Elemento" si no hay texto adicional
+                    atajo += `>${contenidoSeleccionado}>li*${cantidadLi}{${textoLi}}`;
+                } else {
+                    let contenidoModificado = contenidoSeleccionado;
+
+                    if (textoAdicional) {
+                        contenidoModificado = contenidoSeleccionado.replace(/{.*?}/, `{${textoAdicional}}`);
+                    }
+
+                    atajo += `>${contenidoModificado}`;
+                }
+            }
+
+            atajoGenerado = atajo; // Almacenar el atajo generado
+            document.getElementById('resultado').innerText = `Atajo: ${atajo}`;
+        }
+
+        function copiarAlPortapapeles() {
+            if (atajoGenerado) {
+                navigator.clipboard.writeText(atajoGenerado).then(() => {
+                    alert("El atajo se ha copiado al portapapeles.");
+                });
+            }
+        }
+
+        document.getElementById('checkboxClase').addEventListener('change', function() {
+            document.getElementById('nombreClase').disabled = !this.checked;
+        });
+
+        document.getElementById('checkboxContenido').addEventListener('change', function() {
+            const isChecked = this.checked;
+            document.getElementById('contenido').disabled = !isChecked;
+            document.getElementById('textoAdicional').disabled = !isChecked;
+            document.getElementById('cantidadLiContainer').style.display = 'none'; // Ocultar al iniciar
+        });
+
+        document.getElementById('contenido').addEventListener('change', function() {
+            const contenidoSeleccionado = this.value;
+            const isLista = contenidoSeleccionado === "ul" || contenidoSeleccionado === "ol";
+            document.getElementById('cantidadLiContainer').style.display = isLista ? 'block' : 'none'; // Mostrar/ocultar el campo
+        });
+    </script>
+</body>
+</html>

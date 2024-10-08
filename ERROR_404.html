@@ -26,6 +26,10 @@
         a:hover {
             text-decoration: underline;
         }
+        #file-select {
+            display: none;
+            margin-top: 20px;
+        }
     </style>
     <script>
         document.addEventListener('keydown', function(event) {
@@ -33,20 +37,56 @@
                 event.preventDefault(); 
                 let password = prompt("Introduce la contraseña:");
                 if (password === "vagueza extrema") {
-                    window.location.href = "generador_atajos.html"; 
-                }else if (password ==="salva pantallas") {
-                    window.location.href = "/dist/index.html"
-                }
-                else {
+                    loadFileList();
+                } else if (password === "salva pantallas") {
+                    window.location.href = "/dist/index.html";
+                } else {
                     alert("Contraseña incorrecta");
                 }
             }
         });
+
+        function loadFileList() {
+            // Ajusta la ruta aquí
+            fetch('other/filelist.json') // Cambia a '/other/filelist.json' si está en esa carpeta
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Error en la red');
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    const select = document.getElementById('file-select');
+                    select.innerHTML = ''; // Limpiar opciones anteriores
+                    data.files.forEach(file => {
+                        const option = document.createElement('option');
+                        option.value = file;
+                        option.textContent = file;
+                        select.appendChild(option);
+                    });
+                    select.style.display = 'block'; // Mostrar el menú desplegable
+                })
+                .catch(error => {
+                    console.error('Error al cargar la lista de archivos:', error);
+                    alert("No se pudo cargar la lista de archivos. Verifica la ruta del JSON.");
+                });
+        }
+
+        function navigate() {
+            const select = document.getElementById('file-select');
+            const selectedFile = select.value;
+            if (selectedFile) {
+                window.location.href = `/other/${selectedFile}`;
+            }
+        }
     </script>
 </head>
 <body>
     <h1>404</h1>
     <p>Lo sentimos, la página que buscas no existe.</p>
     <p><a href="/">Volver a la página principal</a></p>
+    <select id="file-select" onchange="navigate()">
+        <option value="">Selecciona un archivo...</option>
+    </select>
 </body>
 </html>

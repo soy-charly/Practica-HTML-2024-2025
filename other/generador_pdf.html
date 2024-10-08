@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generar PDF desde Texto</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        textarea {
+            width: 100%;
+            height: 200px;
+        }
+        button {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Generar PDF desde Texto</h1>
+    <textarea id="text-input" placeholder="Escribe tu texto aquí..."></textarea>
+    <button id="generate-pdf">Generar PDF</button>
+
+    <script>
+        // Código para generar PDF
+        document.getElementById('generate-pdf').addEventListener('click', () => {
+            const { jsPDF } = window.jspdf;
+            const pdf = new jsPDF();
+            const textInput = document.getElementById('text-input').value;
+
+            // Añadir contenido al PDF
+            pdf.setFont("Helvetica", "normal", 12);
+            const margin = 10; // margen en mm
+            pdf.text(textInput, margin, margin);
+
+            // Guardar el PDF
+            pdf.save('Texto_Generado.pdf');
+        });
+    </script>
+</body>
+</html>
