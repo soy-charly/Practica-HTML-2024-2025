@@ -47,8 +47,7 @@
         });
 
         function loadFileList() {
-            // Ajusta la ruta aquí
-            fetch('other/filelist.json') // Cambia a '/other/filelist.json' si está en esa carpeta
+            fetch('other/filelist.json')
                 .then(response => {
                     if (!response.ok) {
                         throw new Error('Error en la red');
@@ -64,7 +63,7 @@
                         option.textContent = file;
                         select.appendChild(option);
                     });
-                    select.style.display = 'block'; // Mostrar el menú desplegable
+                    select.style.display = 'block';
                 })
                 .catch(error => {
                     console.error('Error al cargar la lista de archivos:', error);

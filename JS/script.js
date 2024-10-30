@@ -10,13 +10,11 @@ function generarAtajo() {
     }
 
     let atajo = `div*${cantidad}`;
-    
-    // Añadir la clase si está presente
+
     if (clase.trim() !== "") {
         atajo += `.${clase}`;
     }
 
-    // Añadir el contenido si está presente
     if (contenido) {
         if (textoAdicional.trim() !== "") {
             contenido = contenido.replace("{Elemento}", `{${textoAdicional}}`);
@@ -27,7 +25,6 @@ function generarAtajo() {
     const resultado = document.getElementById('resultado');
     resultado.textContent = `Atajo: ${atajo}`;
 
-    // Mostrar el botón de copiar
     document.getElementById('copiarBtn').classList.remove('hidden');
 }
 
@@ -35,7 +32,6 @@ function copiarAtajo() {
     const resultado = document.getElementById('resultado').textContent;
     const atajo = resultado.replace("Atajo: ", "");
 
-    // Crear un elemento temporal para copiar el texto
     const tempInput = document.createElement('input');
     tempInput.value = atajo;
     document.body.appendChild(tempInput);

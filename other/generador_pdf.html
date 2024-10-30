@@ -25,18 +25,15 @@
     <button id="generate-pdf">Generar PDF</button>
 
     <script>
-        // Código para generar PDF
         document.getElementById('generate-pdf').addEventListener('click', () => {
             const { jsPDF } = window.jspdf;
             const pdf = new jsPDF();
             const textInput = document.getElementById('text-input').value;
 
-            // Añadir contenido al PDF
             pdf.setFont("Helvetica", "normal", 12);
-            const margin = 10; // margen en mm
+            const margin = 10;
             pdf.text(textInput, margin, margin);
 
-            // Guardar el PDF
             pdf.save('Texto_Generado.pdf');
         });
     </script>

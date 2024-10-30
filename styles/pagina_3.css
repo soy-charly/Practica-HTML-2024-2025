@@ -1,27 +1,26 @@
-/* Estilos generales */
 body {
-  background-color: #f4f4f4; /* Color de fondo diferente */
+  background-color: #f4f4f4;
   margin: 0;
   padding: 0;
-  color: #444; /* Color de texto más oscuro */
-  font-family: 'Montserrat', sans-serif; /* Usar Montserrat */
+  color: #444;
+  font-family: "Montserrat", sans-serif;
 }
 
 h1,
 h3 {
   text-align: center;
-  color: #2c3e50; /* Color de texto para los títulos */
+  color: #2c3e50;
 }
 
 header {
-  background-color: #007acc; /* Color de fondo del encabezado */
+  background-color: #007acc;
   padding: 20px;
   text-align: center;
 }
 
 header h1 {
-  color: #ffffff; /* Color del título en el encabezado */
-  font-size: 28px; /* Aumento en el tamaño del texto */
+  color: #ffffff;
+  font-size: 28px;
 }
 
 /* Navegación */
@@ -29,42 +28,40 @@ header h1 {
 nav a {
   color: #fff;
   text-decoration: none;
-  margin: 0 15px; /* Mayor margen para separación */
+  margin: 0 15px;
   font-weight: bold;
-  padding: 12px 25px; /* Tamaño de padding mayor */
-  background-color: #005f99; /* Color de fondo diferente */
-  border-radius: 8px; /* Esquinas más redondeadas */
+  padding: 12px 25px;
+  background-color: #005f99;
+  border-radius: 8px;
 }
 
 nav a:hover,
 #paginas nav a:hover {
-  background-color: #003d66; /* Color de fondo al pasar el mouse */
-  text-decoration: underline; /* Subrayado al pasar el mouse */
+  background-color: #003d66;
+  text-decoration: underline;
 }
 
 /* Tablas */
 table {
-  width: 90%; /* Ampliación del ancho de la tabla */
+  width: 90%;
   margin: 20px auto;
-  border-spacing: 15px; /* Espaciado entre celdas */
+  border-spacing: 15px;
 }
 
 table td {
   vertical-align: top;
-  padding: 25px; /* Mayor padding */
+  padding: 25px;
 }
 
 table td img {
   width: 100%;
-  max-width: 350px; /* Tamaño de imagen para mayor claridad */
-  border-radius: 15px; /* Esquinas más redondeadas */
+  max-width: 350px;
+  border-radius: 15px;
 }
-
-/* Botón */
 button {
-  padding: 12px 25px; /* Tamaño de padding mayor */
-  font-size: 18px; /* Aumento en el tamaño del texto */
-  background-color: #ff5733; /* Color de fondo diferente */
+  padding: 12px 25px;
+  font-size: 18px;
+  background-color: #ff5733;
   color: #fff;
   border: none;
   cursor: pointer;
@@ -72,10 +69,8 @@ button {
 }
 
 button:hover {
-  background-color: #c70039; /* Color de fondo al pasar el mouse */
+  background-color: #c70039;
 }
-
-/* Contenedor de contraseña */
 .password-container {
   margin-top: 20px;
   display: none;
@@ -91,20 +86,18 @@ input[type="password"] {
 }
 
 input[type="password"]:focus {
-  border-color: #007acc; /* Color de borde al enfocar */
+  border-color: #007acc;
   outline: none;
 }
-
-/* Específicos */
 code {
-  background-color: #eaeaea; /* Fondo más claro para el código */
-  padding: 3px 8px; /* Padding ajustado */
+  background-color: #eaeaea;
+  padding: 3px 8px;
   border-radius: 4px;
   color: #c7254e;
 }
 
 footer {
-  background-color: #003d66; /* Color de fondo del pie de página */
+  background-color: #003d66;
   color: #fff;
   text-align: center;
   padding: 20px 0;
@@ -115,10 +108,10 @@ footer {
 }
 
 footer a {
-  color: #ffc107; /* Color del enlace */
+  color: #ffc107;
   text-decoration: none;
 }
 
 footer a:hover {
-  text-decoration: underline; /* Subrayado al pasar el mouse */
+  text-decoration: underline;
 }

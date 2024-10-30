@@ -32,7 +32,7 @@
             background-color: #45a049;
         }
         #cantidadLiContainer {
-            display: none; /* Ocultar por defecto */
+            display: none;
         }
     </style>
 </head>
@@ -74,7 +74,7 @@
     <div class="result" id="resultado"></div>
 
     <script>
-        let atajoGenerado = ""; // Variable para almacenar el atajo generado
+        let atajoGenerado = "";
 
         function generarAtajo() {
             const cantidad = parseInt(document.getElementById('cantidadDivs').value);
@@ -99,8 +99,6 @@
             if (contenidoVar) {
                 const contenidoSeleccionado = document.getElementById('contenido').value;
                 const textoAdicional = document.getElementById('textoAdicional').value.trim();
-
-                // Verificar si se seleccionó una lista
                 if (contenidoSeleccionado === "ul" || contenidoSeleccionado === "ol") {
                     const cantidadLi = document.getElementById('cantidadLi').value;
 
@@ -108,9 +106,7 @@
                         alert("Debes ingresar un número válido de elementos en la lista.");
                         return;
                     }
-                    
-                    // Usar el texto adicional para reemplazar {Elemento}
-                    const textoLi = textoAdicional || "Elemento"; // Usar "Elemento" si no hay texto adicional
+                    const textoLi = textoAdicional || "Elemento";
                     atajo += `>${contenidoSeleccionado}>li*${cantidadLi}{${textoLi}}`;
                 } else {
                     let contenidoModificado = contenidoSeleccionado;
@@ -122,8 +118,7 @@
                     atajo += `>${contenidoModificado}`;
                 }
             }
-
-            atajoGenerado = atajo; // Almacenar el atajo generado
+            atajoGenerado = atajo;
             document.getElementById('resultado').innerText = `Atajo: ${atajo}`;
         }
 
@@ -143,13 +138,13 @@
             const isChecked = this.checked;
             document.getElementById('contenido').disabled = !isChecked;
             document.getElementById('textoAdicional').disabled = !isChecked;
-            document.getElementById('cantidadLiContainer').style.display = 'none'; // Ocultar al iniciar
+            document.getElementById('cantidadLiContainer').style.display = 'none';
         });
 
         document.getElementById('contenido').addEventListener('change', function() {
             const contenidoSeleccionado = this.value;
             const isLista = contenidoSeleccionado === "ul" || contenidoSeleccionado === "ol";
-            document.getElementById('cantidadLiContainer').style.display = isLista ? 'block' : 'none'; // Mostrar/ocultar el campo
+            document.getElementById('cantidadLiContainer').style.display = isLista ? 'block' : 'none';
         });
     </script>
 </body>
