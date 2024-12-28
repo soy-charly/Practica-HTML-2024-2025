@@ -8,8 +8,7 @@ Este repositorio contiene un tutorial detallado sobre cómo utilizar Git para ge
 3. [Comandos Básicos de Git](#comandos-básicos-de-git)
 4. [Uso de Ramas](#uso-de-ramas)
 5. [Colaboración con GitHub](#colaboración-con-github)
-6. [Licencia](#licencia)
-7. [Siguientes Pasos](#siguientes-pasos)
+6. [Siguientes Pasos](#siguientes-pasos)
 
 ## Introducción a Git
 Git es un sistema de control de versiones distribuido que permite a los desarrolladores rastrear cambios en su código y trabajar de manera colaborativa.
