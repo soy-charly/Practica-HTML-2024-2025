@@ -74,6 +74,3 @@ Git permite crear y gestionar múltiples ramas para facilitar el desarrollo de n
 ## Siguientes Pasos
 - [Tutorial avanzado de Git](https://www.atlassian.com/git/tutorials)
 - Cómo utilizar **Git Hooks** para automatizar tareas en tu repositorio.
-## Siguientes Pasos
-- [Tutorial avanzado de Git](https://www.atlassian.com/git/tutorials)
-- Cómo utilizar **Git Hooks** para automatizar tareas en tu repositorio.
